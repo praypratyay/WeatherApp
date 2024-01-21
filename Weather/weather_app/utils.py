@@ -31,5 +31,7 @@ def get_qualitative_name(pollutant, concentration):
         return "N/A"
     
     for i in range(4,-1,-1): 
-        if concentration > ranges[pollutant][i]:
+        if concentration >= ranges[pollutant][i]:
             return qualitative_names[i+1]
+        
+    return "N/A"
