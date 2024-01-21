@@ -48,7 +48,7 @@ cd Weather-ui
 npm install 
 npm start
 ```
-The frotend will now be running at port 3000.
+The frontend will now be running at port 3000.
 You can check by going to http://localhost:3000/
 
 <br/>

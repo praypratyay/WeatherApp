@@ -18,20 +18,22 @@ function App() {
   const [error, setError] = useState(false);
 
   const searchChangeHandler = async (enteredData) => {
-    console.log(enteredData)
     const cityName = enteredData;
+    setError(false);
     setIsLoading(true);
 
     try {
       const [todayWeatherResponse] = await fetchWeatherData(cityName);
+      if (todayWeatherResponse.detail) { throw "Invalid City Name"}
       setTodayWeather({ city: enteredData, ...todayWeatherResponse });
-      console.log(todayWeather)
     } catch (error) {
-      setError(true);
+      console.log("Error")
+        setError(true);
     }
 
     setIsLoading(false);
   };
+
 
   let appContent = (
     <Box
@@ -62,7 +64,8 @@ function App() {
       </Typography>
     </Box>
   );
-
+  
+  console.log(todayWeather)
   if (todayWeather) {
     appContent = (
       <React.Fragment>
@@ -76,6 +79,7 @@ function App() {
         </Grid>
       </React.Fragment>
     );
+
   }
 
   if (error) {
