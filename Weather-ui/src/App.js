@@ -27,8 +27,7 @@ function App() {
       if (todayWeatherResponse.detail) { throw "Invalid City Name"}
       setTodayWeather({ city: enteredData, ...todayWeatherResponse });
     } catch (error) {
-      console.log("Error")
-        setError(true);
+      setError(true);
     }
 
     setIsLoading(false);
@@ -65,7 +64,6 @@ function App() {
     </Box>
   );
   
-  console.log(todayWeather)
   if (todayWeather) {
     appContent = (
       <React.Fragment>
