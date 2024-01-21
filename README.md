@@ -54,4 +54,4 @@ You can check by going to http://localhost:3000/
 <br/>
 
 ## Demo
-![](https://github.com/praypratyay/OpenWeather/blob/main/DEMO.gif)
+![](https://github.com/praypratyay/WeatherApp/blob/main/DEMO.gif)
